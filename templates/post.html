@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>{% block title %} {{ post['title'] }} {% endblock %}</h2>
+    <span class="badge badge-primary">{{ post['created'] }}</span>
+    <p>{{ post['content'] }}</p>
+
+    <form action="{{ url_for('edit', id=post['id']) }}" method='GET, POST'>
+        <input type="submit" value="Edit Post"
+                class="btn btn-primary btn-sm"
+                onclick="return confirm('Edit this post?')">
+{% endblock %}

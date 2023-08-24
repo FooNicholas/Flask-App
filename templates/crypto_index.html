@@ -1,0 +1,38 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Crypto Price Tracker</title>
+  <style>
+    table,
+    th,
+    tr {
+      padding: 10px;
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+  </style>
+</head>
+
+<body>
+
+  <table id="price-table">
+    
+    <thead>
+	    <tr>
+        <th>CryptoCurrency (CoinGecko)</th>
+        <th>Price (USD)</th>
+	      <th>Price (SGD)</th>
+      </tr>
+    </thead>
+
+    <tbody id="table-body">
+
+    </tbody>
+
+  </table>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
